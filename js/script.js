@@ -1,12 +1,19 @@
 $(document).ready(function () {
     $('.slider').slick({
-        slidesToShow: 3,
+        // infinite: false,
+        slidesToShow: 4,
         slidesToScroll: 1,
         speed: 300,
         adaptiveHeight: true,
         responsive: [
             {
-                breakpoint: 1200,
+                breakpoint: 1600,
+                settings: {
+                    slidesToShow: 3,
+                }
+            },
+            {
+                breakpoint: 1240,
                 settings: {
                     slidesToShow: 2,
                 }

@@ -76,24 +76,23 @@ body{
 }
 
 .slider {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
-	width: 80%;
-	margin: 100px auto 0 auto;
+	display: block;
+	width: 100%;
+	margin: 80px auto 0 auto;
 	position: relative;
+	z-index: 0;
+	padding: 0 0 0 130px;
 }
-
 .slide {
-	width: 440px;
-	max-width: 100%;
-	height: 400px;
-	max-height: 100%;
+	display: inline-block;
+	width: 380px;
+	height: 300px;
 	overflow: hidden;
 	cursor: pointer;
 	background-color: $hover-color;
 	position: relative;
-	// margin: 0 50px;
+	outline: none;
+	margin: 0 auto;
 	&:hover .slide__img,
 	&:active .slide__img,
 	&:focus .slide__img {
@@ -130,6 +129,7 @@ body{
 	&__img {
 		@include my_pos();
 		@include tr();
+		
 	}
 }
 .slick-arrow {
@@ -141,7 +141,7 @@ body{
 	z-index: 1;
 	top: 50%;
 	transform: translateY(-50%);
-	background-color: transparent;
+	background-color: rgba(238,238, 238, .6);
 	border: 1px solid #000;
 	border-radius: 50%;
 	outline: none;
@@ -154,19 +154,20 @@ body{
 	background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgNTkuNDE0IDU5LjQxNCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTkuNDE0IDU5LjQxNDsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiBjbGFzcz0iIj48Zz48Zz4KCTxwb2x5Z29uIHN0eWxlPSJmaWxsOiMwMDAwMDAiIHBvaW50cz0iMTUuNTYxLDU5LjQxNCAxNC4xNDYsNTggNDIuNDM5LDI5LjcwNyAxNC4xNDYsMS40MTQgMTUuNTYxLDAgNDUuMjY4LDI5LjcwNyAgIiBkYXRhLW9yaWdpbmFsPSIjNDhBMERDIiBjbGFzcz0iYWN0aXZlLXBhdGgiIGRhdGEtb2xkX2NvbG9yPSIjMDAwNjBBIj48L3BvbHlnb24+CjwvZz48L2c+IDwvc3ZnPg==);
 	background-size: 60%;
 	background-position: center;
+	z-index: 2;
 	&.slick-prev {
-		left: -8%;
+		left: 20px;
 		transform: translateY(-50%) rotate(180deg);
 	}
 
 	&.slick-next {
-		right: -8%;
+		right: 20px;
 	}
 
 	&:hover,
 	&:active,
 	&:focus {
-		// background-color: $hover-color;
-		border-color: $hover-color;
+		background-color: rgba(238, 238, 238, .9);
+		border-color: #eee;
 	}
 }
