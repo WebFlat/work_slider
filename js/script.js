@@ -7,19 +7,19 @@ $(document).ready(function () {
         adaptiveHeight: true,
         responsive: [
             {
-                breakpoint: 1600,
+                breakpoint: 1640,
                 settings: {
                     slidesToShow: 3,
                 }
             },
             {
-                breakpoint: 1240,
+                breakpoint: 1275,
                 settings: {
                     slidesToShow: 2,
                 }
             },
             {
-                breakpoint: 840,
+                breakpoint: 920,
                 settings: {
                     slidesToShow: 1,
                 }
